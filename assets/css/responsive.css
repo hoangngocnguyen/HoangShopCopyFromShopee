@@ -1,0 +1,206 @@
+/* Mobile + Tablet */
+@media (max-width: 1023px) {
+    :root {
+        --height-header: 60px;
+    }
+
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+        height: var(--height-header);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+    }
+
+    .header__logo {
+        -webkit-tap-highlight-color: transparent;
+    }
+    .header-with-search {
+        padding: 0;
+    }
+    .header-with-search__wrap {
+        display: flex;
+    }
+    .header__navigation {
+        display: block;
+    }
+
+    /* Header cart */
+    .header__cart {
+        width: 90px;
+        justify-content: flex-end;
+    }
+    .header__cart-wrap {
+        -webkit-tap-highlight-color: transparent;
+    }
+    .header__cart-list {
+        position: fixed;
+        top: var(--height-header);
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+    .header__cart-list::before {
+        display: none;
+    }
+
+    .header-sort-bar {
+        display: flex;
+    }
+
+
+    /* App container */
+    .app__container {
+        margin-top: calc(var(--height-header) + var(--height-header-sort-bar));
+    }
+    .app__content {
+        padding-top: 10px;
+    }
+    .mobile-category {
+        display: block;
+    }
+
+    .footer-section {
+        margin-top: 24px;
+    }
+
+    .footer-bottom__list-item-link {
+        margin-top: 20px;
+        border-left: none;
+    }
+
+    
+    
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header__navigation-btn {
+        margin-right: 16px;
+    }
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header__logo {
+        margin: 0;
+    }
+    .header__logo-link {
+        display: flex;
+        align-items: center;
+    }
+    .header__logo-img {
+        width: 120px;
+    }
+
+    /* Header With Search */
+    .header-with-search {
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 0 10px; */
+    }
+
+    .header__mobile-search {
+        display: block;
+    }
+
+    @keyframes mobileHeaderSearchSlipDown {
+        from {
+            top: calc(var(--height-header) / 2);
+        }
+        to {
+            top: var(--height-header);
+        }
+    }
+    .header__search {
+        position: fixed;
+        left: 0;
+        top: var(--height-header);
+        width: 100%;
+        height: var(--height-header-sort-bar);
+        z-index: 1;
+        animation: mobileHeaderSearchSlipDown linear 0.2s;
+        padding: 2px;
+        box-shadow: 0 1px 2px #ccc;
+        display: none;
+    }
+    /* Header Search History */
+    .header__search-history {
+        position: fixed;
+        top: calc(var(--height-header) + var(--height-header-sort-bar));
+        width: 100%;
+        box-shadow: 0 1px 3px #c7c7c7;
+    }
+    
+    .header__cart {
+        width: 90px;
+    }
+    .header__cart-list {
+        padding: 0 20px;
+    }
+
+    .product {
+        margin: 0 8px;
+    }
+    .mobile-category__list {
+        margin: 0 8px;
+    }
+
+    .pagination-item__link {
+        --height: 28px;
+        font-size: 2rem;
+        min-width: 30px;
+        height: var(--height);
+        line-height: var(--height);
+        margin: 0px 4px;
+    }
+
+    .footer__download-apps-link {
+        display: block;
+        padding: 4px;
+    }
+    .footer-bottom__list {
+        display: block;
+        text-align: center;
+    }
+    .footer-section, .footer-bottom__info {
+        padding: 0 16px;
+    }
+
+
+
+    /* MODAL */
+    .auth-form__container {
+        padding: 0 24px;
+    }
+    .auth-form__socials {
+        column-gap: 4px;
+        padding: 8px;
+    }
+    .btn--with-icon {
+        padding: 5px 0 5px 7px;
+    }
+    .auth-form__socials-title {
+        margin: unset;
+        padding: 0 6px;
+        font-size: 1.2rem;
+    }
+    .auth-form__socials-btn {
+        height: 36px;
+    }
+    
+}

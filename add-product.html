@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <style>
+        .add-product {
+            width: 520px;
+            background-color: #e8e8e8;
+            padding: 10px 20px;
+            margin: 60px auto;
+            border-radius: 4px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .add-product__heading {
+            font-size: 2.8rem;
+            text-align: center;
+            padding: 16px 0 40px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 4px 0;
+        }
+
+        .product-form-input__label {
+            font-size: 1.4rem;
+        }
+
+        .product-form-input {
+            padding: 6px 0;
+            width: 100%;
+            font-size: 1.4rem;
+        }
+
+        .product-form__submit {
+            margin-top: 12px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="add-product">
+        <h1 class="add-product__heading">Thêm sản phẩm mới</h1>
+        <form id="product-Form">
+            <table>
+                <tr class="product-form-input-wrap">
+                    <td>
+                        <label class="product-form-input__label" for="product-name">Tên sản phẩm:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="product-name" required class="product-form-input">
+                    </td>
+                </tr>
+                <tr class="product-form-input-wrap">
+                    <td>
+                        <label class="product-form-input__label" for="product-image">Hình ảnh sản phẩm:</label>
+                    </td>
+                    <td>
+                        <input type="file" id="product-image" accept="image/*" required class="product-form-input">
+                    </td>
+                </tr>
+                <tr class="product-form-input-wrap">
+                    <td>
+                        <label class="product-form-input__label" for="product-price">Giá:</label>
+                    </td>
+                    <td>
+                        <input type="number" id="product-price" required class="product-form-input">
+                    </td>
+                </tr>
+                <tr class="product-form-input-wrap">
+                    <td>
+                        <label class="product-form-input__label" for="product-brand">Thương hiệu:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="product-brand" required class="product-form-input">
+                    </td>
+                </tr>
+                <tr class="product-form-input-wrap">
+                    <td>
+                        <label class="product-form-input__label" for="product-origin">Xuất xứ:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="product-origin" required class="product-form-input">
+                    </td>
+                </tr>
+            </table>
+            <div class="product-form__submit">
+                <button type="submit" class="product-form__submit-btn btn btn--primary">Add Product</button>
+            </div>
+        </form>
+        <img id="imagePreview" class="product-image" style="display: none;">
+    </div>
+</body>
+
+</html>
